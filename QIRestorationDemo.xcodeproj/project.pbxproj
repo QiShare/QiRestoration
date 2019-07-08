@@ -15,6 +15,11 @@
 		11485C1822C8E0BA0009C7A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11485C1722C8E0BA0009C7A7 /* main.m */; };
 		11485C2222C8E0BA0009C7A7 /* QIRestorationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11485C2122C8E0BA0009C7A7 /* QIRestorationDemoTests.m */; };
 		11485C2D22C8E0BA0009C7A7 /* QIRestorationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11485C2C22C8E0BA0009C7A7 /* QIRestorationDemoUITests.m */; };
+		11485C3C22C8E4D60009C7A7 /* PersonDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11485C3B22C8E4D60009C7A7 /* PersonDetailController.m */; };
+		11485C3F22C8F0610009C7A7 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11485C3E22C8F0610009C7A7 /* InfoViewController.m */; };
+		B669DCBA22CF5FC500E59EFC /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B669DCB922CF5FC500E59EFC /* InfoModel.m */; };
+		B669DCBD22CF617700E59EFC /* InfoViewmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = B669DCBC22CF617700E59EFC /* InfoViewmodel.m */; };
+		B669DCC022CF657600E59EFC /* InfoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B669DCBF22CF657600E59EFC /* InfoDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		11485C2822C8E0BA0009C7A7 /* QIRestorationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QIRestorationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11485C2C22C8E0BA0009C7A7 /* QIRestorationDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QIRestorationDemoUITests.m; sourceTree = "<group>"; };
 		11485C2E22C8E0BA0009C7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11485C3A22C8E4D60009C7A7 /* PersonDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDetailController.h; sourceTree = "<group>"; };
+		11485C3B22C8E4D60009C7A7 /* PersonDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDetailController.m; sourceTree = "<group>"; };
+		11485C3D22C8F0610009C7A7 /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		11485C3E22C8F0610009C7A7 /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		B669DCB822CF5FC500E59EFC /* InfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
+		B669DCB922CF5FC500E59EFC /* InfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoModel.m; sourceTree = "<group>"; };
+		B669DCBB22CF617700E59EFC /* InfoViewmodel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewmodel.h; sourceTree = "<group>"; };
+		B669DCBC22CF617700E59EFC /* InfoViewmodel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewmodel.m; sourceTree = "<group>"; };
+		B669DCBE22CF657600E59EFC /* InfoDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoDetailController.h; sourceTree = "<group>"; };
+		B669DCBF22CF657600E59EFC /* InfoDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoDetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,16 @@
 				11485C0922C8E0B80009C7A7 /* AppDelegate.m */,
 				11485C0B22C8E0B80009C7A7 /* ViewController.h */,
 				11485C0C22C8E0B80009C7A7 /* ViewController.m */,
+				11485C3D22C8F0610009C7A7 /* InfoViewController.h */,
+				11485C3E22C8F0610009C7A7 /* InfoViewController.m */,
+				B669DCBE22CF657600E59EFC /* InfoDetailController.h */,
+				B669DCBF22CF657600E59EFC /* InfoDetailController.m */,
+				11485C3A22C8E4D60009C7A7 /* PersonDetailController.h */,
+				11485C3B22C8E4D60009C7A7 /* PersonDetailController.m */,
+				B669DCBB22CF617700E59EFC /* InfoViewmodel.h */,
+				B669DCBC22CF617700E59EFC /* InfoViewmodel.m */,
+				B669DCB822CF5FC500E59EFC /* InfoModel.h */,
+				B669DCB922CF5FC500E59EFC /* InfoModel.m */,
 				11485C0E22C8E0B80009C7A7 /* Main.storyboard */,
 				11485C1122C8E0BA0009C7A7 /* Assets.xcassets */,
 				11485C1322C8E0BA0009C7A7 /* LaunchScreen.storyboard */,
@@ -262,9 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B669DCBD22CF617700E59EFC /* InfoViewmodel.m in Sources */,
 				11485C0D22C8E0B80009C7A7 /* ViewController.m in Sources */,
+				11485C3C22C8E4D60009C7A7 /* PersonDetailController.m in Sources */,
 				11485C1822C8E0BA0009C7A7 /* main.m in Sources */,
+				B669DCC022CF657600E59EFC /* InfoDetailController.m in Sources */,
+				11485C3F22C8F0610009C7A7 /* InfoViewController.m in Sources */,
 				11485C0A22C8E0B80009C7A7 /* AppDelegate.m in Sources */,
+				B669DCBA22CF5FC500E59EFC /* InfoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZX24TX624;
 				INFOPLIST_FILE = QIRestorationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZX24TX624;
 				INFOPLIST_FILE = QIRestorationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.backgroundColor = UIColor.whiteColor;
+//    [self.window makeKeyAndVisible];
+//    
+//    ViewController  *viewCtrl = [[ViewController alloc]init];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewCtrl];
+//    self.window.rootViewController= nav;
+    
     return YES;
 }
 
@@ -47,5 +55,39 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {
+    return YES;
+}
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
+    return YES;
+}
+- (void)application:(UIApplication *)application willEncodeRestorableStateWithCoder:(NSCoder *)coder {
+    NSLog(@"状态将要保存");
+}
+- (void) application:(UIApplication *)application didDecodeRestorableStateWithCoder:(NSCoder *)coder {
+    NSLog(@"状态已经恢复");
+}
+/*
+ 注意：如果我们没有指明：恢复每一个控制器时 用于创建此控制器的对象所属的类，则必须在AppDelegate中实现此方法：让我们可以在恢复期间创建一个新的控制器。
+ */
 
+- (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray<NSString *> *)identifierComponents coder:(NSCoder *)coder {
+   
+    UIViewController *vc;
+    UIStoryboard *storyboard = [coder decodeObjectForKey:UIStateRestorationViewControllerStoryboardKey];
+    if (storyboard){
+        //此处为何这样做？来自故事版的视图，会由UIKIT 自动帮我们查找和创建视图控制器的。若是使用从故事版初始化对象，反而对此初始化影响恢复。
+        /*vc = [storyboard instantiateViewControllerWithIdentifier:identifierComponents.lastObject];
+        vc.restorationIdentifier = [identifierComponents lastObject];
+        vc.restorationClass = NSClassFromString(identifierComponents.lastObject);*/
+        return nil;
+        
+    } else {
+      vc = [[NSClassFromString(identifierComponents.lastObject) alloc]init];
+    }
+    
+    
+    return vc;
+
+}
 @end
