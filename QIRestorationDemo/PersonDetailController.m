@@ -97,12 +97,7 @@ static NSString * const selectedStateKey = @"selectedStateKey";
     
 }
 
-/*
- UIViewControllerRestoration苹果官方解释
- Your data source objects can adopt this protocol to assist a corresponding table or collection view during the state restoration process. Those classes use the methods of this protocol to ensure that the same data objects (and not just the same row indexes) are scrolled into view and selected.
- Before you can implement this protocol, your app must be able to identify data objects consistently between app launches. This requires being able to take some identifying marker of the object and convert that marker into a string that can then be saved with the rest of the app state. For example, a Core Data app could convert a managed object’s ID into a URI that it could then convert into a string.
- Currently, only the UITableView and UICollectionView classes support this protocol. You would implement this protocol in any objects you use as the data source for those classes. If you do not adopt the protocol in your data source, the views do not attempt to restore the selected and visible rows.
- */
+
 #pragma mark - @protocol UIViewControllerRestoration
 
 /**

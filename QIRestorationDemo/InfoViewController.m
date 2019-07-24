@@ -31,7 +31,6 @@
     [self setupViews];
     
     [self setupDatas];
-    
     //设置恢复标识
     self.restorationIdentifier = NSStringFromClass(self.class);
     

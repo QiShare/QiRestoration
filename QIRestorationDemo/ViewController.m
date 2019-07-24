@@ -79,7 +79,7 @@ static NSString * const introKey = @"introKey";
 // can still be referenced by other objects in state restoration archives, but it won't
 // save/restore any state of its own
 //注意：每层控制器 如nav tab 都需要添加对用的恢复标识 ，否则不会走保存的恢复的方法
-- (void)encodeRestorableStateWithCoder:(NSCoder *)coder; {
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
     
     [super encodeRestorableStateWithCoder:coder];
     [coder encodeObject: _nameTextField.text ?: @"" forKey:nameKey];
@@ -88,7 +88,7 @@ static NSString * const introKey = @"introKey";
     [coder encodeObject: _introTextView.text ?: @"" forKey:introKey];
     
 }
-- (void)decodeRestorableStateWithCoder:(NSCoder *)coder; {
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
     [super decodeRestorableStateWithCoder:coder];
     self.name =  [NSString stringWithString:[coder decodeObjectForKey:nameKey]];
     self.age = [NSString stringWithString:[coder decodeObjectForKey:ageKey]];
